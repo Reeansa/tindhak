@@ -2,14 +2,15 @@
 module.exports = {
   content: ['./public/**/*.{html,js}',
     './src/**/*.{html,js}',
-  './node_modules/flowbite/**/*.js'],
+    './node_modules/flowbite/**/*.js'],
   theme: {
     extend: {
       fontFamily: {
         sans: ['Signika']
       }
-  },
-  plugins: [
-    require('flowbite/plugin'),
-  ],
+    },
+    plugins: [
+      require('flowbite/plugin'),
+    ],
+  }
 }
