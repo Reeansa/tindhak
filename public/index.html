@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body class="bg-[#EEEEEE]">
     <nav class="flex items-center justify-between flex-wrap bg-[#F0EBCE] p-2">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
             <img src="img/logo/tindhak-logo.png" width="70" height="70" alt="">
@@ -138,7 +138,7 @@
                     <div class="flex items-center justify-start flex-wrap">
                         <input class="border-0" type="text" placeholder="Pilih Destinasi">
                         <div>
-                            <img src="img/icons/destinasi-icon.png" alt="">
+                            <img src="img/icons/destinasi.png" alt="">
                         </div>
                         <svg class="mx-5" width="2" height="40" viewBox="0 0 2 40" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -148,18 +148,8 @@
                 </div>
                 <div>
                     <h1 class="font-semibold">Kategori</h1>
-                    <div x-data="{
-                            search: '',
-                            open: false,
-                            items: ['Bitcoin', 'Ethereum', 'Siacoin'],
-                            get filteredItems() {
-                                return this.items.filter(
-                                    i => i.toLowerCase().startsWith(this.search.toLowerCase())
-                                    )
-                                }
-                            }" class="flex items-center justify-start flex-wrap">
-                        <input x-on:click="open = !open" type="search" x-model="search" placeholder="Cari Kategori"
-                            class="border-0">
+                    <div class="flex items-center justify-start flex-wrap">
+                        <input type="search" x-model="search" placeholder="Cari Kategori" class="border-0">
 
                         <div>
                             <img src="img/icons/kategori-icon.png" alt="">
@@ -180,14 +170,15 @@
                     </div>
                 </div>
                 <div class="ml-12">
-                    <button type="button" class="bg-[#97A866] font-medium rounded-lg text-sm p-5 text-center">
-                        <svg class="text-[#F2F2EF]" width="24" height="23" viewBox="0 0 24 23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M22.7101 20.3562L17.6501 15.2962C18.8683 13.6744 19.5259 11.7004 19.5237 9.67202C19.5237 4.49102 15.3086 0.275879 10.1276 0.275879C4.94659 0.275879 0.731445 4.49102 0.731445 9.67202C0.731445 14.853 4.94659 19.0682 10.1276 19.0682C12.1559 19.0704 14.13 18.4128 15.7517 17.1945L20.8117 22.2545C21.0679 22.4835 21.4019 22.6057 21.7453 22.5961C22.0888 22.5865 22.4155 22.4458 22.6584 22.2028C22.9013 21.9599 23.0421 21.6332 23.0517 21.2898C23.0613 20.9464 22.9391 20.6123 22.7101 20.3562ZM3.41606 9.67202C3.41606 8.34461 3.80968 7.047 4.54715 5.9433C5.28463 4.83959 6.33282 3.97936 7.5592 3.47138C8.78557 2.9634 10.135 2.83049 11.4369 3.08945C12.7389 3.34842 13.9347 3.98763 14.8734 4.92625C15.812 5.86488 16.4512 7.06076 16.7102 8.36267C16.9691 9.66458 16.8362 11.014 16.3282 12.2404C15.8203 13.4668 14.96 14.515 13.8563 15.2525C12.7526 15.9899 11.455 16.3836 10.1276 16.3836C8.34824 16.3814 6.64237 15.6736 5.38418 14.4154C4.12598 13.1572 3.41819 11.4514 3.41606 9.67202Z"
-                                fill="#F2F2EF" />
-                        </svg>
-                    </button>
+                    <a href="produk.html"><button type="button"
+                            class="bg-[#97A866] font-medium rounded-lg text-sm p-5 text-center">
+                            <svg class="text-[#F2F2EF]" width="24" height="23" viewBox="0 0 24 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.7101 20.3562L17.6501 15.2962C18.8683 13.6744 19.5259 11.7004 19.5237 9.67202C19.5237 4.49102 15.3086 0.275879 10.1276 0.275879C4.94659 0.275879 0.731445 4.49102 0.731445 9.67202C0.731445 14.853 4.94659 19.0682 10.1276 19.0682C12.1559 19.0704 14.13 18.4128 15.7517 17.1945L20.8117 22.2545C21.0679 22.4835 21.4019 22.6057 21.7453 22.5961C22.0888 22.5865 22.4155 22.4458 22.6584 22.2028C22.9013 21.9599 23.0421 21.6332 23.0517 21.2898C23.0613 20.9464 22.9391 20.6123 22.7101 20.3562ZM3.41606 9.67202C3.41606 8.34461 3.80968 7.047 4.54715 5.9433C5.28463 4.83959 6.33282 3.97936 7.5592 3.47138C8.78557 2.9634 10.135 2.83049 11.4369 3.08945C12.7389 3.34842 13.9347 3.98763 14.8734 4.92625C15.812 5.86488 16.4512 7.06076 16.7102 8.36267C16.9691 9.66458 16.8362 11.014 16.3282 12.2404C15.8203 13.4668 14.96 14.515 13.8563 15.2525C12.7526 15.9899 11.455 16.3836 10.1276 16.3836C8.34824 16.3814 6.64237 15.6736 5.38418 14.4154C4.12598 13.1572 3.41819 11.4514 3.41606 9.67202Z"
+                                    fill="#F2F2EF" />
+                            </svg>
+                        </button></a>
                 </div>
             </div>
         </section>
@@ -434,7 +425,7 @@
                         <div>
                             <a href="jenggala.html">
                                 <div class="bg-cover bg-center bg-no-repeat h-[182px] rounded-3xl"
-                                style="background-image: url('img/curug-jenggala.jpg');"></div>
+                                    style="background-image: url('img/curug-jenggala.jpg');"></div>
                             </a>
                             <div class="mt-4 float-right">
                                 <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
@@ -446,7 +437,9 @@
                                 </svg>
                             </div>
                             <div class="mt-4">
-                                <h1 class="font-semibold text-[#1D293F] text-[20px]">Curug Jenggala</h1>
+                                <a href="jenggala.html">
+                                    <h1 class="font-semibold text-[#1D293F] text-[20px]">Curug Jenggala</h1>
+                                </a>
                                 <p class="text-[#99A3AD] text-[14px]">Curug | Wisata Alam</p>
                             </div>
                             <div class="flex items-center float-right">
@@ -751,7 +744,8 @@
                 <!-- End -->
             </div>
             <div class="group/item flex flex-row-reverse items-center fixed float-right left-28 bottom-28">
-                <div class="flex flex-row-reverse fixed items-center justify-center bg-[#97A866] rounded-full p-4 right-8">
+                <div
+                    class="flex flex-row-reverse fixed items-center justify-center bg-[#97A866] rounded-full p-4 right-8">
                     <svg width="20" height="20" viewBox="0 0 20 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M17.1429 0H2.85714C1.28571 0 0 1.5 0 3.33333V30L10 25L20 30V3.33333C20 1.5 18.7143 0 17.1429 0ZM15.7143 22.1123L10 20L4.28571 22.1123V6.66667C4.28571 5.75 4.92857 5 5.71429 5H14.2857C15.0714 5 15.7143 5.75 15.7143 6.66667V22.1123Z"
@@ -763,7 +757,6 @@
                         <span class="text-[#F2F2EF] font-bold group-hover/edit:text-[#F2F2EF]">BOOK NOW</span>
                     </a>
                 </div>
-                
             </div>
         </section>
     </main>
